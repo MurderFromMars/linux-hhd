@@ -21,10 +21,10 @@ find "./build/RPMS/$ARCH" -type f -name "kernel-*.rpm" ! -name "*.src.rpm" -exec
 buildah unmount $BOCI
 
 buildah config \
-    --label "org.bazzite.kernel.version=$(cat .tarfile-release)" \
-    --label "org.bazzite.kernel.nvidia=$(cat .nvidia-release)" \
-    --label "org.bazzite.kernel.nvidia_lts=$(cat .nvidia-lts-release)" \
-    --label "org.bazzite.kernel.zfs=$(cat .zfs-release)" \
+    --label "dev.hhd.kernel.version=$(cat .tarfile-release)" \
+    --label "dev.hhd.kernel.nvidia=$(cat .nvidia-release)" \
+    --label "dev.hhd.kernel.nvidia_lts=$(cat .nvidia-lts-release)" \
+    --label "dev.hhd.kernel.zfs=$(cat .zfs-release)" \
     $BOCI
 
 # Commit the image

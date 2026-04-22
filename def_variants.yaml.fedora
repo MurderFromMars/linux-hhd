@@ -12,10 +12,6 @@ packages:
     depends-on:
     - modules-core
     - modules
-  - name: modules-akmods
-    depends-on:
-    - modules-core
-    - modules
 
 
 rules:
@@ -25,8 +21,6 @@ rules:
 
   - arch/.*: modules-core
   - crypto/.*: modules-core
-
-  - drivers/custom/.*: modules-akmods
 
   - drivers/accel/.*: modules-core
   - drivers/accessibility/.*: modules-core
@@ -328,6 +322,7 @@ rules:
   - drivers/usb/gadget/function/usb_f_midi2.*: modules
   - drivers/usb/image/.*: modules
   - drivers/usb/misc/trancevibrator.*: modules-extra
+  - drivers/usb/misc/usbio.ko: modules-core
   - drivers/usb/misc/.*: modules
   - drivers/usb/serial/.*: modules
   - drivers/usb/typec/mux/nb7vpq904m.*: modules
