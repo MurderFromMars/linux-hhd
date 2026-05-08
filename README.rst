@@ -33,6 +33,12 @@ For Arch, the kernel is available in the AUR.
    # Use your favorite AUR helper (e.g., paru, pikaur, yay)
    yay -S linux-hhd-bin
 
+Or build from source with the bundled installer (works in any shell):
+
+.. code:: sh
+
+   sh -c 'git clone -b hhd-6.19 https://github.com/MurderFromMars/linux-hhd && cd linux-hhd && ./install.sh'
+
 Contributing
 ------------
 
